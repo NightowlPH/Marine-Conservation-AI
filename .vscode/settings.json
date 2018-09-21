@@ -1,5 +1,6 @@
 {
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": false,
-    "python.linting.enabled": false
+    "python.linting.enabled": false,
+    "python.pythonPath": "${workspaceFolder}\\python scripts\\Scripts\\python.exe"
 }
