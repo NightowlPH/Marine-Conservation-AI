@@ -2,11 +2,14 @@ import pandas as pd
 import requests
 
 # Read excel file
-xl = pd.ExcelFile('demo.xlsx')
-df = xl.parse("Sheet1")
+excelFileName = 'MarineAnimals_ImageURL.xlsx'
+excelSheetName = '300 images'
+xl = pd.ExcelFile(excelFileName) #excel file name
+df = xl.parse(excelSheetName) #excel sheet name
 
-# Loop through 'full_picture' column and download pictures
-for pic in df['full_picture'].head(): #5 pictures...remove the .head() to download all images
+# Loop through columns and download pictures
+excelImageCellHeader = 'URL' #Image cell header
+for pic in df[excelImageCellHeader].head(): #to download all images. use .head() to download only 5 images
     url = pic
     r = requests.get(url, allow_redirects=True)
     if url.find('/'):
