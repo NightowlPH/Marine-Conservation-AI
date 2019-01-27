@@ -37,6 +37,5 @@ while True:
         break
 
 # Export as Excel
-# df = pd.DataFrame.from_dict(post_data)
 df = pd.DataFrame(all_post_data)
 df.to_excel('demo.xlsx')
