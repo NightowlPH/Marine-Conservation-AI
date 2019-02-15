@@ -36,6 +36,7 @@ button.place(anchor='n', relx=0.5, rely=0.2)
 label = tk.Label(root, text="Begin the process", bg='#41a2c6')
 label.place(anchor='s', relx=0.5, rely=0.4)
 
+# button = tk.Button(root, text="Start", bg='#50a0d7', command=lambda: action())
 button = tk.Button(root, text="Start", bg='#50a0d7', command=start_function)
 button.place(anchor='s', relx=0.5, rely=0.5)
 
