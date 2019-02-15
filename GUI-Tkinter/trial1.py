@@ -3,10 +3,10 @@ from tkinter import ttk
 import tkinter as tk
 
 HEIGHT = 300
-WIDTH = 300
+WIDTH = 350
 
 root = tk.Tk()
-root.title('MWWP')
+root.title('Marine Animal Image Classifier')
 
 canvas = tk.Canvas(root, height=HEIGHT, width=WIDTH)
 canvas.pack()
