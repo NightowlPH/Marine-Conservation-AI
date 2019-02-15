@@ -1,6 +1,14 @@
-# Import libraries
+# Import libraries and functions
 import tkinter as tk
+from tkinter import *
+from tkinter import ttk
+
 from trial import perform
+from retrain import startRetrain
+from test import startTest
+
+HEIGHT = 300
+WIDTH = 350
 
 # Create Instance
 windows = tk.Tk()
@@ -8,19 +16,27 @@ windows = tk.Tk()
 # Add a title to GUI
 windows.title("Marine Animal Image Classifier")
 
-#create frame
-coolFrame = tk.Frame(windows) 
+frame = tk.Frame(windows)
+frame.pack()
 
-coolFrame.pack()
+#set canvas size
+canvas = tk.Canvas(windows, height=HEIGHT, width=WIDTH)
+canvas.pack()
 
 # Put "False" to make non-resizable
-windows.resizable(False, False)
+windows.resizable(True, True)
 
 #tk.[widgetname](root window, properties/cofiguration)
-# def perform():
-#     tk.Label(windows, text="This is our first label").pack()
 
-perform(tk, windows)
+#When Retrain button is clicked, retrain process starts
+retrain_button = tk.Button(windows, text="Retrain", bg='#50a0d7', command=startRetrain)
+retrain_button.place(anchor='s', relx=0.5, rely=0.1)
+
+#when Test button is clicked, test process starts
+test_button = tk.Button(windows, text="Test", bg='#50a0d7', command=startTest)
+test_button.place(anchor='s', relx=0.5, rely=0.2)
+
+# perform(tk, windows)
 
 # Start the GUI/Create the main loop
 windows.mainloop()
