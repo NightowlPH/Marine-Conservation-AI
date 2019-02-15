@@ -7,26 +7,23 @@ WIDTH = 300
 
 root = tk.Tk()
 root.title('MWWP')
-label.wm_attributes('-alpha', 0.7)  
 
 canvas = tk.Canvas(root, height=HEIGHT, width=WIDTH)
 canvas.pack()
 
-frame = tk.Frame(root, bg='#4197bd')
-frame.place(relx=0.1, rely=0.1, relwidth=0.8, relheight=0.8)
+#
+label = tk.Label(root, text="Choose image to classify")
+label.place(anchor='n', relx=0.5, rely=0.3)
 
-label = tk.Label(frame, text="Choose image to classify")
-label.pack()
+button = tk.Button(root, text="Import")
+button.place(anchor='n', relx=0.5, rely=0.4)
 
-button = tk.Button(frame, text="Import")
-button.pack()
+# 
+label = tk.Label(root, text="Begin the process")
+label.place(anchor='s', relx=0.5, rely=0.6)
 
-label = tk.Label(frame, text="Begin the process")
-label.pack()
-
-button = tk.Button(frame, text="Start")
-button.pack()
-
+button = tk.Button(root, text="Start")
+button.place(anchor='s', relx=0.5, rely=0.7)
 
 
 root.resizable(False, False)
