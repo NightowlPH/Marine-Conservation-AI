@@ -9,7 +9,8 @@ windows = tk.Tk()
 windows.title("Marine Animal Image Classifier")
 
 #create frame
-coolFrame = tk.Frame(windows)
+coolFrame = tk.Frame(windows) 
+
 coolFrame.pack()
 
 # Put "False" to make non-resizable
