@@ -3,7 +3,6 @@ import tkinter as tk
 from tkinter import *
 from tkinter import ttk
 
-from trial import perform
 from retrain import startRetrain
 from test import startTest
 
